@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <h1 class="text-center btn-success">Fill the form to predcit house price</h1>
+
+    <div class="container">
+        <form action="{% url 'result' %}" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+              <label>Year of Built</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" required placeholder="Type Built year" name="byear">
+              
+            </div>
+            <div class="form-group">
+              <label>2nd FlrSF</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" required placeholder="2ndFlrSF" name="flor">
+              
+            </div>
+            <div class="form-group">
+              <label>Live Area</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" required placeholder="Live Area" name="area">
+              
+            </div>
+            <div class="form-group">
+              <label>Full Bath</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" required placeholder=" Nimber of FullBath" name="fbath">
+              
+            </div>
+            <div class="form-group">
+              <label>Half Bath</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" required placeholder=" Number of HalfBath" name="hbath">
+              
+            </div>
+            <div class="form-group">
+              <label>Bedroom</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" required placeholder="Total Bedroom" name="bedroom">
+              
+            </div>
+            
+            <div class="form-group">
+              <label>TotRmsAbvGrd</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" required placeholder="TotRmsAbvGrdr" name="troom">
+              
+            </div>
+            <div class="form-group">
+              <label>Year Sold</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" required placeholder="YrSold" name="syear">
+              
+            </div>
+
+            <input class="btn btn-primary" type="submit" value="submit">
+            <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+          </form>
+
+    </div>
+
+
+</body>
+</html>
